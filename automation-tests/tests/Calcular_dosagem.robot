@@ -22,3 +22,14 @@ Calcular dosagem de Trigo
     Selecionar Trigo
     Calcular Dosagem
     Validar cálculo de Trigo
+
+Calcular dosagem com área inválida
+    Selecionar área inválida
+    Selecionar Trigo
+    Calcular Dosagem inválida
+    Validar área inválida
+
+Calcular dosagem com cultura inválida
+    Selecionar área
+    Calcular Dosagem inválida
+    Validar cultura inválida
