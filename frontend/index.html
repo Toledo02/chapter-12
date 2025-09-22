@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Dosagem de Insumos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Calculadora de Dosagem de Insumos</h1>
+    
+    <form id="dosage-form">
+      <div class="form-group">
+        <label for="area-input">Área do Talhão (1 a 1000 hectares)</label>
+        <input type="number" id="area-input">
+      </div>
+      
+      <div class="form-group">
+        <label for="crop-select">Tipo de Cultura</label>
+        <select id="crop-select">
+          <option value="">Selecione a cultura...</option>
+          <option value="SOJA">Soja</option>
+          <option value="MILHO">Milho</option>
+          <option value="TRIGO">Trigo</option>
+        </select>
+      </div>
+      
+      <button type="submit" id="calculate-button">Calcular Dosagem</button>
+    </form>
+    
+    <div id="result-container" class="hidden">
+      </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
