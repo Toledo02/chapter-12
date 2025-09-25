@@ -5,8 +5,8 @@ import { sleep, check } from 'k6';
 export const options = {
   // Cenário de teste com "stages" para simular um aumento e diminuição de carga
   stages: [
-    { duration: '10s', target: 10 },  // Aumenta de 0 para 50 usuários em 10 segundos
-    { duration: '20s', target: 10 },  // Mantém 50 usuários por 20 segundos (carga sustentada)
+    { duration: '10s', target: 50 },  // Aumenta de 0 para 50 usuários em 10 segundos
+    { duration: '20s', target: 50 },  // Mantém 50 usuários por 20 segundos (carga sustentada)
     { duration: '5s', target: 0 },   // Diminui para 0 usuários em 5 segundos
   ],
 
@@ -25,7 +25,7 @@ const cropTypes = ['SOJA', 'MILHO', 'TRIGO'];
 export default function () {
   const url = 'http://localhost:3000/api/v1/calculate-dosage';
 
-  // --- GERAÇÃO DE DADOS ALEATÓRIOS COM JAVASCRIPT PURO ---
+  // --- GERAÇÃO DE DADOS ALEATÓRIOS ---
   // Gera uma área aleatória entre 1 e 1000
   const randomArea = Math.floor(Math.random() * 1000) + 1;
   // Escolhe uma cultura aleatória do nosso array
@@ -52,6 +52,6 @@ export default function () {
     'resposta contém a propriedade totalDosage': (r) => r.json('totalDosage') !== undefined,
   });
 
-  // Pausa de 300ms para simular o "think time" do usuário antes da próxima ação
-  sleep(0.3); 
+  // Pausa de 500ms para simular o "think time" do usuário antes da próxima ação
+  sleep(0.5); 
 }
