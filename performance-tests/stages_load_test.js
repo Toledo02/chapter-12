@@ -6,7 +6,7 @@ export const options = {
   // Cenário de teste com "stages" para simular um aumento e diminuição de carga
   stages: [
     { duration: '10s', target: 50 },  // Aumenta de 0 para 50 usuários em 10 segundos
-    { duration: '20s', target: 50 },  // Mantém 50 usuários por 20 segundos (carga sustentada)
+    { duration: '15s', target: 50 },  // Mantém 50 usuários por 15 segundos (carga sustentada)
     { duration: '5s', target: 0 },   // Diminui para 0 usuários em 5 segundos
   ],
 
