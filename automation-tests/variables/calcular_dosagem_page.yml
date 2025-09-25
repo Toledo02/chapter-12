@@ -1,0 +1,6 @@
+url: http://127.0.0.1:8080/
+title: h1
+area: area-input
+cultura: crop-select
+calcular: calculate-button
+mensagem: result-container
